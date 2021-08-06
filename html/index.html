@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//多次冒泡冒泡排序
+		var arr = [4, 3, 9, 6, 7, 4, 2, 7, 1, 2, 10];
+		//外层的for代表冒泡的次数，每次冒一个泡，就找到了一个最大值，放在后边
+		for(var i = 0; i < arr.length; i++){
+			//内层for是每次冒泡找最大值，次数就是数组的长度，减去已经找到的最大值个数
+			for(var j = 0; j < arr.length - i; j++){
+				//如果前边的值大于后边的值，则直接交换位置
+				if(arr[j] > arr[j + 1]){
+					var temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+		}
+		console.log(arr)
+	</script>
+</body>
+</html>
